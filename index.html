@@ -925,36 +925,10 @@
 <script>
 // ===================== DATA =====================
 let state = JSON.parse(localStorage.getItem('vida_state') || 'null') || {
-  habits: [
-    { id: 1, name: '30 flexiones', emoji: '💪', days: 'todos', streak: 5, bestStreak: 12, monthDone: 18, monthTotal: 22, weekHistory: [1,1,0,1,1,1,1], doneDays: {} },
-    { id: 2, name: 'Levantarse antes de las 10', emoji: '☀️', days: 'todos', streak: 3, bestStreak: 8, monthDone: 15, monthTotal: 22, weekHistory: [1,0,1,1,1,1,0], doneDays: {} },
-    { id: 3, name: 'Lavarme los dientes', emoji: '🦷', days: 'todos', streak: 7, bestStreak: 20, monthDone: 21, monthTotal: 22, weekHistory: [1,1,1,1,1,1,1], doneDays: {} },
-    { id: 4, name: 'Ir al gimnasio', emoji: '🏋️', days: 'gym', streak: 2, bestStreak: 6, monthDone: 8, monthTotal: 10, weekHistory: [1,0,1,0,1,0,0], doneDays: {} },
-    { id: 5, name: 'Leer 20 minutos', emoji: '📖', days: 'todos', streak: 1, bestStreak: 5, monthDone: 10, monthTotal: 22, weekHistory: [0,0,1,0,1,1,0], doneDays: {} },
-  ],
-  metas: [
-    { id: 1, name: 'Lanzar @_plantabaja', emoji: '👟', progress: 40, deadline: '2025-03-31' },
-    { id: 2, name: 'Ahorrar para el viaje', emoji: '✈️', progress: 25, deadline: '2025-06-30' },
-    { id: 3, name: 'Cerrar 3 clientes nuevos', emoji: '🤝', progress: 66, deadline: '2025-02-28' },
-  ],
-  listas: [
-    { id: 1, name: 'Gym bag', items: [
-      { label: 'Ropa de entrenamiento', done: true },
-      { label: 'Proteína en polvo', done: false },
-      { label: 'Guantes', done: false },
-      { label: 'Auriculares', done: true },
-    ]},
-    { id: 2, name: 'Ideas @_plantabaja', items: [
-      { label: 'Hoodie skeleton negro', done: true },
-      { label: 'Fotos en la calle', done: false },
-      { label: 'Definir precio lanzamiento', done: false },
-    ]},
-  ],
-  notas: [
-    { id: 1, tag: 'Frase', text: 'El que no arriesga no gana. Pero el que no planea tampoco.', date: '8 ene' },
-    { id: 2, tag: 'Negocio', text: 'Idea: contenido mostrando el proceso de producción de la marca. Detrás de escena.', date: '5 ene' },
-    { id: 3, tag: 'Frase', text: 'Disciplina es elegir lo que querés más sobre lo que querés ahora.', date: '2 ene' },
-  ],
+  habits: [],
+  metas: [],
+  listas: [],
+  notas: [],
   todayChecked: {}
 };
 
