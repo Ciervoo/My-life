@@ -929,7 +929,8 @@ let state = JSON.parse(localStorage.getItem('vida_state') || 'null') || {
   metas: [],
   listas: [],
   notas: [],
-  todayChecked: {}
+  todayChecked: {},
+  lastDate: null
 };
 
 let currentMetaId = null;
@@ -1367,6 +1368,13 @@ function closeModal(e) {
 
 // ===================== INIT =====================
 function init() {
+  // Reset hábitos si cambió el día
+  if (state.lastDate !== todayKey) {
+    state.todayChecked = {};
+    state.lastDate = todayKey;
+    save();
+  }
+
   const d = today;
   const dayName = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'][d.getDay()];
   document.getElementById('headerDate').textContent = `${dayName}, ${d.getDate()} de ${months[d.getMonth()]}`;
